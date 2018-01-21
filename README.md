@@ -1,3 +1,10 @@
+	0. Functions:
+		
+		I.   To control motor speed in web page
+
+		II.  To display Real Distance which ultrasounds measure in web page
+		
+
 	1. Environment requirement:
 
 		Python3.4
