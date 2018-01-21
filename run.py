@@ -1,6 +1,17 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+#
+# 对这个程序的一些说明：
+#
+# 1. 因手上只有一个步进动机，
+# 只写了控制步进动机一(Motor One)的控制程序，其余的四个动机控制代码尚未编写
+# 
+# 2. 显示超声测距实时距离的界面，五个界面测的都是同一个超声模块测的数值
+# 之后根据需要修改即可
+#
+
+
 from flask import Flask, render_template, request
 from flask_script import Manager
 from time import sleep
@@ -16,6 +27,7 @@ manager = Manager(app)
 @app.route('/')
 def hello_world():
     return render_template("index.html")
+
 
 
 #
