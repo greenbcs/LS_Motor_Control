@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="{{ url_for('static', filename='jQuery/jquery-1.6.4.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/css_test.css') }}">
+    <script>
+
+        /* **************************动机按钮的显示隐藏****************** */
+        function button_click1() {
+            // 第一个动机的按钮
+            var device = document.getElementById("device1");
+            device.onclick = function () {
+                var button_display = document.getElementById("button_display1");
+                if (button_display.style.display=='block'){
+                    button_display.style.display = 'none';
+                }
+                else{
+                    button_display.style.display = 'block';
+                }
+            };
+        }
+
+        function button_click2() {
+            // 第二个动机的按钮
+            var device = document.getElementById("device2");
+            device.onclick = function () {
+                var button_display = document.getElementById("button_display2");
+                if (button_display.style.display=='block'){
+                    button_display.style.display = 'none';
+                }
+                else{
+                    button_display.style.display = 'block';
+                }
+            };
+        }
+
+        function button_click3() {
+            // 第三个动机的按钮
+            var device = document.getElementById("device3");
+            device.onclick = function () {
+                var button_display = document.getElementById("button_display3");
+                if (button_display.style.display=='block'){
+                    button_display.style.display = 'none';
+                }
+                else{
+                    button_display.style.display = 'block';
+                }
+            };
+        }
+
+        function button_click4() {
+            // 第四个动机的按钮
+            var device = document.getElementById("device4");
+            device.onclick = function () {
+                var button_display = document.getElementById("button_display4");
+                if (button_display.style.display=='block'){
+                    button_display.style.display = 'none';
+                }
+                else{
+                    button_display.style.display = 'block';
+                }
+            };
+        }
+
+        function button_click5() {
+            // 第五个动机的按钮
+            var device = document.getElementById("device5");
+            device.onclick = function () {
+                var button_display = document.getElementById("button_display5");
+                if (button_display.style.display=='block'){
+                    button_display.style.display = 'none';
+                }
+                else{
+                    button_display.style.display = 'block';
+                }
+            };
+        }
+
+        /* *****************************步进动机控制********************* */
+        // motor one
+        $(document).ready(function() {
+            function refreshContainer(number) {
+                document.getElementById("motor_1_status").innerHTML = number;
+            }
+            $(".fast1").click(function () {
+                $.ajax({
+                    url: "/motor_1", data: {"motor_order": "fast"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".middle1").click(function () {
+                $.ajax({
+                    url: "/motor_1", data: {"motor_order": "middle"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".low1").click(function () {
+                $.ajax({
+                    url: "/motor_1", data: {"motor_order": "low"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".stop1").click(function () {
+                $.ajax({
+                    url: "/motor_1", data: {"motor_order": "stop"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+        });
+
+        // motor two
+        $(document).ready(function() {
+            function refreshContainer(number) {
+                document.getElementById("motor_2_status").innerHTML = number;
+            }
+            $(".fast2").click(function () {
+                $.ajax({
+                    url: "/motor_2", data: {"motor_order": "fast"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".middle2").click(function () {
+                $.ajax({
+                    url: "/motor_2", data: {"motor_order": "middle"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".low2").click(function () {
+                $.ajax({
+                    url: "/motor_2", data: {"motor_order": "low"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".stop2").click(function () {
+                $.ajax({
+                    url: "/motor_2", data: {"motor_order": "stop"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+        });
+
+        // motor three
+        $(document).ready(function() {
+            function refreshContainer(number) {
+                document.getElementById("motor_3_status").innerHTML = number;
+            }
+            $(".fast3").click(function () {
+                $.ajax({
+                    url: "/motor_3", data: {"motor_order": "fast"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".middle3").click(function () {
+                $.ajax({
+                    url: "/motor_3", data: {"motor_order": "middle"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".low3").click(function () {
+                $.ajax({
+                    url: "/motor_3", data: {"motor_order": "low"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".stop3").click(function () {
+                $.ajax({
+                    url: "/motor_3", data: {"motor_order": "stop"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+        });
+
+        // motor four
+        $(document).ready(function() {
+            function refreshContainer(number) {
+                document.getElementById("motor_4_status").innerHTML = number;
+            }
+            $(".fast4").click(function () {
+                $.ajax({
+                    url: "/motor_4", data: {"motor_order": "fast"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".middle4").click(function () {
+                $.ajax({
+                    url: "/motor_4", data: {"motor_order": "middle"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".low4").click(function () {
+                $.ajax({
+                    url: "/motor_4", data: {"motor_order": "low"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".stop4").click(function () {
+                $.ajax({
+                    url: "/motor_4", data: {"motor_order": "stop"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+        });
+
+        // motor five
+        $(document).ready(function() {
+            function refreshContainer(number) {
+                document.getElementById("motor_5_status").innerHTML = number;
+            }
+            $(".fast5").click(function () {
+                $.ajax({
+                    url: "/motor_5", data: {"motor_order": "fast"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".middle5").click(function () {
+                $.ajax({
+                    url: "/motor_5", data: {"motor_order": "middle"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".low5").click(function () {
+                $.ajax({
+                    url: "/motor_5", data: {"motor_order": "low"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+            $(".stop5").click(function () {
+                $.ajax({
+                    url: "/motor_5", data: {"motor_order": "stop"}, success: function (data) {
+                        refreshContainer(data);
+                    }
+                });
+            });
+        });
+
+        /* *******************************超声数值显示*********************** */
+        // ultrasound one
+        function refreshContainer_1(number) {
+               document.getElementById("get_number_every_sec1").innerHTML = number;
+        }
+        var get_number_every_sc_1 = function(){
+               $.get("/ultrasound_1",function(data){
+                   refreshContainer_1(data);
+               });
+        };
+        function refresh_1() {
+            t = window.setInterval(get_number_every_sc_1, 1600);
+        }
+
+        // ultrasound two
+        function refreshContainer_2(number) {
+               document.getElementById("get_number_every_sec2").innerHTML = number;
+        }
+        var get_number_every_sc_2 = function(){
+               $.get("/ultrasound_2",function(data){
+                   refreshContainer_2(data);
+               });
+        };
+        function refresh_2() {
+            t = window.setInterval(get_number_every_sc_2, 1600);
+        }
+
+        // ultrasound three
+        function refreshContainer_3(number) {
+               document.getElementById("get_number_every_sec3").innerHTML = number;
+        }
+        var get_number_every_sc_3 = function(){
+               $.get("/ultrasound_3",function(data){
+                   refreshContainer_3(data);
+               });
+        };
+        function refresh_3() {
+            t = window.setInterval(get_number_every_sc_3, 1600);
+        }
+
+        // ultrasound Four
+        function refreshContainer_4(number) {
+               document.getElementById("get_number_every_sec4").innerHTML = number;
+        }
+        var get_number_every_sc_4 = function(){
+               $.get("/ultrasound_4",function(data){
+                   refreshContainer_4(data);
+               });
+        };
+        function refresh_4() {
+            t = window.setInterval(get_number_every_sc_4, 1600);
+        }
+
+        // ultrasound Five
+        function refreshContainer_5(number) {
+               document.getElementById("get_number_every_sec5").innerHTML = number;
+        }
+        var get_number_every_sc_5 = function(){
+               $.get("/ultrasound_5",function(data){
+                   refreshContainer_5(data);
+               });
+        };
+        function refresh_5() {
+            t = window.setInterval(get_number_every_sc_5, 1600);
+        }
+
+
+        // 执行绑定函数的函数
+        function addLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = func;
+            } else {
+                window.onload = function() {
+                    oldonload();
+                    func();
+                }
+            }
+        }
+
+        addLoadEvent(button_click1);
+        addLoadEvent(button_click2);
+        addLoadEvent(button_click3);
+        addLoadEvent(button_click4);
+        addLoadEvent(button_click5);
+        addLoadEvent(refresh_1);
+        addLoadEvent(refresh_2);
+        addLoadEvent(refresh_3);
+        addLoadEvent(refresh_4);
+        addLoadEvent(refresh_5);
+    </script>
+</head>
+<body>
+<h2 id="title">Controlling Interface</h2>
+
+<section id="motors_status">
+
+</section>
+
+<!-- 装置图片及其上面的 5 个动机操控按钮 -->
+<section id="equipments">
+    <img src="{{ url_for('static',filename='images/back.png') }}" id="devices" alt="devices" />
+    <div id="motor_1">
+        <input id="device1" type="image" src="{{ url_for('static',filename='images/00001.gif') }}" value="MOTOR-1" />
+        <br />
+        <div id="button_display1">
+            <input class="fast1" type="button" value="Fast"/>
+            <br />
+            <input class="middle1" type="button" value="Middle"/>
+            <br />
+            <input class="low1" type="button" value="Low"/>
+            <br />
+            <input class="stop1" type="button" value="Stop"/>
+        </div>
+    </div>
+    <div id="motor_2">
+        <input id="device2" type="image" src="{{ url_for('static',filename='images/00002.gif') }}" value="MOTOR-1" />
+        <br />
+        <div id="button_display2">
+            <input class="fast2" type="button" value="Fast"/>
+            <br />
+            <input class="middle2" type="button" value="Middle"/>
+            <br />
+            <input class="low2" type="button" value="Low"/>
+            <br />
+            <input class="stop2" type="button" value="Stop"/>
+        </div>
+    </div>
+    <div id="motor_3">
+        <input id="device3" type="image" src="{{ url_for('static',filename='images/00003.gif') }}" value="MOTOR-1" />
+        <br />
+        <div id="button_display3">
+            <input class="fast3" type="button" value="Fast"/>
+            <br />
+            <input class="middle3" type="button" value="Middle"/>
+            <br />
+            <input class="low3" type="button" value="Low"/>
+            <br />
+            <input class="stop3" type="button" value="Stop"/>
+        </div>
+    </div>
+    <div id="motor_4">
+        <input id="device4" type="image" src= "{{ url_for('static',filename='images/00004.gif') }}"value="MOTOR-1" />
+        <br />
+        <div id="button_display4">
+            <input class="fast4" type="button" value="Fast"/>
+            <br />
+            <input class="middle4" type="button" value="Middle"/>
+            <br />
+            <input class="low4" type="button" value="Low"/>
+            <br />
+            <input class="stop4" type="button" value="Stop"/>
+        </div>
+    </div>
+    <div id="motor_5">
+        <input id="device5" type="image" src="{{ url_for('static',filename='images/00005.gif') }}" value="MOTOR-1" />
+        <br />
+        <div id="button_display5">
+            <input class="fast5" type="button" value="Fast"/>
+            <br />
+            <input class="middle5" type="button" value="Middle"/>
+            <br />
+            <input class="low5" type="button" value="Low"/>
+            <br />
+            <input class="stop5" type="button" value="Stop"/>
+        </div>
+    </div>
+</section>
+
+
+<!-- 五个动机控制界面和超声测距实时显示界面 -->
+<!-- One -->
+<div class="motor_ultrasound" id="motor_ultrasound1">
+    <section class="motor_control">
+        <h4 id="motor_name1">Motor-One</h4>
+        <div class="motor_control_button">
+            <p>Motor Control</p>
+            <input class="fast1" type="button" value="Fast">
+            <input class="middle1" type="button" value="middle">
+            <input class="low1" type="button" value="low">
+            <input class="stop1" type="button" value="stop">
+        </div>
+        <div class="motor_status">
+            <h4>Status:</h4>
+            <p id="motor_1_status">Stop</p>
+        </div>
+    </section>
+
+    <section class="ultrasound_real_time">
+        <h4 id="ultrasound_name1">Ultrasound-One</h4>
+        <p>Real Distance(cm):</p>
+        <p id="get_number_every_sec1">00.00</p>
+    </section>
+</div>
+
+<!-- Two -->
+<div class="motor_ultrasound" id="motor_ultrasound2">
+    <section class="motor_control">
+        <h4 id="motor_name2">Motor-Two</h4>
+        <div class="motor_control_button">
+            <p>Motor Control</p>
+            <input class="fast2" type="button" value="Fast">
+            <input class="middle2" type="button" value="middle">
+            <input class="low2" type="button" value="low">
+            <input class="stop2" type="button" value="stop">
+        </div>
+        <div class="motor_status">
+            <h4>Status:</h4>
+            <p id="motor_2_status">Stop</p>
+        </div>
+    </section>
+
+    <section class="ultrasound_real_time">
+        <h4 id="ultrasound_name2">Ultrasound-Two</h4>
+        <p>Real Distance(cm):</p>
+        <p id="get_number_every_sec2">00.00</p>
+    </section>
+</div>
+
+<!-- Three -->
+<div class="motor_ultrasound" id="motor_ultrasound3">
+    <section class="motor_control">
+        <h4 id="motor_name3">Motor-Three</h4>
+        <div class="motor_control_button">
+            <p>Motor Control</p>
+            <input class="fast3" type="button" value="Fast">
+            <input class="middle3" type="button" value="middle">
+            <input class="low3" type="button" value="low">
+            <input class="stop3" type="button" value="stop">
+        </div>
+        <div class="motor_status">
+            <h4>Status:</h4>
+            <p id="motor_3_status">Stop</p>
+        </div>
+    </section>
+
+    <section class="ultrasound_real_time">
+        <h4 id="ultrasound_name3">Ultrasound-Three</h4>
+        <p>Real Distance(cm):</p>
+        <p id="get_number_every_sec3">00.00</p>
+    </section>
+</div>
+
+<!-- Four -->
+<div class="motor_ultrasound" id="motor_ultrasound4">
+    <section class="motor_control">
+        <h4 id="motor_name4">Motor-Four</h4>
+        <div class="motor_control_button">
+            <p>Motor Control</p>
+            <input class="fast4" type="button" value="Fast">
+            <input class="middle4" type="button" value="middle">
+            <input class="low4" type="button" value="low">
+            <input class="stop4" type="button" value="stop">
+        </div>
+        <div class="motor_status">
+            <h4>Status:</h4>
+            <p id="motor_4_status">Stop</p>
+        </div>
+    </section>
+
+    <section class="ultrasound_real_time">
+        <h4 id="ultrasound_name4">Ultrasound-Four</h4>
+        <p>Real Distance(cm):</p>
+        <p id="get_number_every_sec4">00.00</p>
+    </section>
+</div>
+
+<!-- Five -->
+<div class="motor_ultrasound" id="motor_ultrasound">
+    <section class="motor_control">
+        <h4 id="motor_name">Motor-Five</h4>
+        <div class="motor_control_button">
+            <p>Motor Control</p>
+            <input class="fast5" type="button" value="Fast">
+            <input class="middle5" type="button" value="middle">
+            <input class="low5" type="button" value="low">
+            <input class="stop5" type="button" value="stop">
+        </div>
+        <div class="motor_status">
+            <h4>Status:</h4>
+            <p id="motor_5_status">Stop</p>
+        </div>
+    </section>
+
+    <section class="ultrasound_real_time">
+        <h4 id="ultrasound_name5">Ultrasound-Five</h4>
+        <p>Real Distance(cm):</p>
+        <p id="get_number_every_sec5">00.00</p>
+    </section>
+</div>
+
+
+</body>
+</html>

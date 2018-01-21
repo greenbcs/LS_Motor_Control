@@ -1,0 +1,164 @@
+* {
+    /* 切换盒子模型块元素内容区域的计算方式不一样 */
+    box-sizing: border-box;
+}
+
+body {
+    /* 采用960像素布局，在浏览器居中显示 */
+    /* 距离边界10像素，背景设置为灰色 */
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    border: solid 1px #cccccc;
+    background-color: rgb(222, 222, 222);
+}
+
+#title {
+    /* 网页标题，居中 */
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Consolas, Arial, Narkisim;
+}
+
+/**************************************************/
+
+section {
+    border: solid 1px #cccccc;
+}
+
+section div div {
+    /* 给每个动机按钮设置显示隐藏的属性 */
+    display: none;
+}
+
+section img {
+    /* 设置图层值为-1，使他处于最底层 */
+    width: 936px;
+    background-color: rgba(25,169,135,0.7);
+    z-index: -1;
+}
+
+#equipments div input {
+    /* 把按钮大小调成合适大小 */
+    width: 60px;
+    height: 50px;
+    z-index: 10;
+}
+
+#equipments div div input {
+    height: 30px;
+    font-family: Consolas, Arial, Serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#motor_1 {
+    position: absolute;
+    top: 173px;
+    margin-left: 78px;
+}
+
+#motor_2 {
+    position: absolute;
+    top: 115px;
+    margin-left: 160px;
+}
+
+#motor_3 {
+    position: absolute;
+    top: 110px;
+    margin-left: 400px;
+}
+
+#motor_4 {
+    position: absolute;
+    top: 110px;
+    margin-left: 580px;
+}
+
+#motor_5 {
+    position: absolute;
+    top: 110px;
+    margin-left: 760px;
+}
+
+#equipments div div input {
+    background-color: green;
+}
+
+#equipments div div input:last-child {
+    background-color: red;
+}
+/*******************************************************/
+div.motor_ultrasound {
+    display: flex;
+    clear: both;
+    z-index: 10;
+}
+
+div section.motor_control, div section.ultrasound_real_time {
+    margin-top: 20px;
+    width: 460px;
+    height: auto;
+    background-color: rgba(105,118,119,0.6);
+}
+
+div section.motor_control {
+    margin-right: 20px;
+}
+
+div section.motor_control h4, div section.ultrasound_real_time h4 {
+    font-size: 18px;
+    text-align: center;
+    font-family: Arial, Consolas;
+}
+
+div section.motor_control div {
+    width: 50%;
+    float: left;
+    border: solid 1px #aaaaaa;
+}
+
+div section div.motor_control_button p {
+    text-align: center;
+}
+
+div section div.motor_control_button input {
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+    font-size: 1.2em;
+    background-color: green;
+}
+
+div section div.motor_control_button input:last-child {
+    background-color: red;
+}
+
+div section div.motor_status h4, div section div.motor_status p {
+    text-align: center;
+}
+
+div section div.motor_status h4 {
+    margin-bottom: 2px;
+    font-size: 1.3em;
+}
+
+div section div.motor_status p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 2em;
+}
+
+div section.ultrasound_real_time p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+div section.ultrasound_real_time p:last-child {
+    font-size: 3em;
+}
